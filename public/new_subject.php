@@ -2,6 +2,7 @@
 <?php require_once("../includes/db_connection.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 
+<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
@@ -11,9 +12,9 @@
   </div>
   <div id="page">
 		<?php echo message(); ?>
-    <?php $errors = errors(); ?>
-    <?php echo form_errors($errors); ?>
-    <?php  ?>
+		<?php $errors = errors(); ?>
+		<?php echo form_errors($errors); ?>
+
 		<h2>Create Subject</h2>
 		<form action="create_subject.php" method="post">
 		  <p>Menu name:
@@ -22,7 +23,7 @@
 		  <p>Position:
 		    <select name="position">
 				<?php
-					$subject_set = find_all_subjects();
+					$subject_set = find_all_subjects(false);
 					$subject_count = mysqli_num_rows($subject_set);
 					for($count=1; $count <= ($subject_count + 1); $count++) {
 						echo "<option value=\"{$count}\">{$count}</option>";
