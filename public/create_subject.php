@@ -19,11 +19,11 @@ if (isset($_POST['submit'])) {
 
 	if ($result) {
 		// Success
-		$_SESSION[$message] = "Subject created.";
+		$_SESSION["message"] = "Subject created.";
 		redirect_to("manage_content.php");
 	} else {
 		// Failure
-		$message = "Subject creation failed.";
+		$_SESSION["message"] = "Subject creation failed.";
 		redirect_to("new_subject.php");
 	}
 

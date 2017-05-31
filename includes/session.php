@@ -1,16 +1,18 @@
 <?php
-  session_start();
 
-  function message() {
-    if (isset($_SESSION["message"])) {
-      $output = "<div class=\"message\">";
-      $output .= htmlentities($_SESSION["message"]);
-      $output .= "</div>";
+	session_start();
 
-      // clear message after use
-      $_SESSION["message"] = null;
+	function message() {
+		if (isset($_SESSION["message"])) {
+			$output = "<div class=\"message\">";
+			$output .= htmlentities($_SESSION["message"]);
+			$output .= "</div>";
 
-      return $output;
-    }
-  }
- ?>
+			// clear message after use
+			$_SESSION["message"] = null;
+
+			return $output;
+		}
+	}
+
+?>

@@ -9,9 +9,8 @@
 		<?php echo navigation($current_subject, $current_page); ?>
   </div>
   <div id="page">
-    <?php echo message(); ?>
+		<?php echo message(); ?>
 		<h2>Create Subject</h2>
-
 		<form action="create_subject.php" method="post">
 		  <p>Menu name:
 		    <input type="text" name="menu_name" value="" />
@@ -32,7 +31,7 @@
 		    &nbsp;
 		    <input type="radio" name="visible" value="1" /> Yes
 		  </p>
-		  <input type="submit" value="Create Subject" />
+		  <input type="submit" name="submit" value="Create Subject" />
 		</form>
 		<br />
 		<a href="manage_content.php">Cancel</a>
