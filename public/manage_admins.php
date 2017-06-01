@@ -11,7 +11,8 @@
 <?php include("../includes/layouts/header.php"); ?>
 <div id="main">
   <div id="navigation">
-    &nbsp;
+    <br />
+    <a href="admin.php">&laquo; Main menu</a>
   </div>
   <div id="page">
     <?php echo message(); ?>
