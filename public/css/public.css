@@ -25,13 +25,25 @@ a:hover {
 
 #header {
 	height: 70px;
-	margin: 0; padding: 0; text-align: left;
-  background: #1A446C; color: #D4E6F4;
+	margin: 0; padding: 0;
+  text-align: left;
+  background: #1A446C;
+  color: #D4E6F4;
+}
+
+#header a, #header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#header a:hover {
+  opacity: .8;
 }
 
 #header h1 {
-  padding: 1em;
+  padding: .5em;
   margin: 0;
+  font-size: 30px;
 }
 
 #main {

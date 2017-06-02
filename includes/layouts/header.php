@@ -9,9 +9,10 @@
 <html lang="en">
 	<head>
 		<title>PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="css/public.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div id="header">
-      <h1>PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></h1>
+      <h1><a href="index.php">PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></a></h1>
     </div>
