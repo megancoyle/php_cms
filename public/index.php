@@ -6,10 +6,18 @@
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(true); ?>
 
+<?php $data = public_navigation($current_subject, $current_page); ?>
+<?php $main_menu = $data[0]; ?>
+<?php $sub_menu = $data[1]; ?>
+
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <?php echo public_navigation($current_subject, $current_page); ?>
+        <?php echo $main_menu ?>
       </div>
     </nav>
+
+    <div class="secondary-nav">
+      <?php echo $sub_menu ?>
+    </div>
 
     <div class="container">
       <?php if ($current_page) { ?>

@@ -22,8 +22,16 @@ img {
 }
 
 /* Navigation */
-.selected {
+.selected, .active {
   font-weight: bold;
+}
+
+.navbar-nav {
+  padding-left: 0;
+}
+
+.navbar-nav > li {
+  list-style: none;
 }
 
 /* Page Content */

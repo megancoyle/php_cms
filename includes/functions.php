@@ -226,6 +226,7 @@
 
 	function public_navigation($subject_array, $page_array) {
 		$output = "<ul class=\"navbar-nav mr-auto\">";
+		$output_sub = "";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
 			$output .= "<li class=\"nav-item";
@@ -242,20 +243,20 @@
 			if ($subject_array["id"] == $subject["id"] ||
 					$page_array["subject_id"] == $subject["id"]) {
 				$page_set = find_pages_for_subject($subject["id"]);
-				$output .= "<ul class=\"pages\">";
+				$output_sub .= "<ul class=\"pages\">";
 				while($page = mysqli_fetch_assoc($page_set)) {
-					$output .= "<li";
+					$output_sub .= "<li";
 					if ($page_array && $page["id"] == $page_array["id"]) {
-						$output .= " class=\"selected\"";
+						$output_sub .= " class=\"selected\"";
 					}
-					$output .= ">";
-					$output .= "<a href=\"index.php?page=";
-					$output .= urlencode($page["id"]);
-					$output .= "\">";
-					$output .= htmlentities($page["menu_name"]);
-					$output .= "</a></li>";
+					$output_sub .= ">";
+					$output_sub .= "<a href=\"index.php?page=";
+					$output_sub .= urlencode($page["id"]);
+					$output_sub .= "\">";
+					$output_sub .= htmlentities($page["menu_name"]);
+					$output_sub .= "</a></li>";
 				}
-				$output .= "</ul>";
+				$output_sub .= "</ul>";
 				mysqli_free_result($page_set);
 			}
 
@@ -263,7 +264,7 @@
 		}
 		mysqli_free_result($subject_set);
 		$output .= "</ul>";
-		return $output;
+		return array($output, $output_sub);
 	}
 
 	function password_encrypt($password) {
