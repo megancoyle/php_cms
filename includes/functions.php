@@ -225,17 +225,17 @@
 	}
 
 	function public_navigation($subject_array, $page_array) {
-		$output = "<ul class=\"subjects\">";
+		$output = "<ul class=\"navbar-nav mr-auto\">";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
-			$output .= "<li";
+			$output .= "<li class=\"nav-item";
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
-				$output .= " class=\"selected\"";
+				$output .= " active";
 			}
-			$output .= ">";
+			$output .= "\">";
 			$output .= "<a href=\"index.php?subject=";
 			$output .= urlencode($subject["id"]);
-			$output .= "\">";
+			$output .= "\" class=\"nav-link\">";
 			$output .= htmlentities($subject["menu_name"]);
 			$output .= "</a>";
 
@@ -317,7 +317,7 @@
 			return false;
 		}
 	}
-	
+
 	function logged_in() {
 		return isset($_SESSION['admin_id']);
 	}

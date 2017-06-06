@@ -15,80 +15,13 @@ img {
   border: none;
 }
 
-a {
-  color: #8D0D19;
-}
-
-a:hover {
-  color: #1A446C;
-}
-
-#header {
-	height: 70px;
-	margin: 0; padding: 0;
-  text-align: left;
-  background: #1A446C;
-  color: #D4E6F4;
-}
-
-#header a, #header a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-#header a:hover {
-  opacity: .8;
-}
-
-#header h1 {
-  padding: .5em;
-  margin: 0;
-  font-size: 30px;
-}
-
 #main {
 	height: 600px; width: 100%;
 	margin: 0; padding: 0;
 	background: #e6e6e6;
 }
 
-#footer {
-	clear: both;
-	height: 2em; margin: 0; padding: 1em;
-	text-align: center;
-  background: #1A446C;  color: #D4E6F4;
-}
-
 /* Navigation */
-#navigation {
-	float: left;
-	width: 150px; height: 100%;
-	margin: 0; padding: 0 2em;
-	color: #D4E6F4;
-  background: #595959;
-}
-
-#navigation a {
-  color: #D4E6F4;
-  text-decoration: none;
-}
-
-#navigation a:hover {
-  color: #FFFFFF;
-}
-
-ul.subjects {
-	margin: 1em 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-ul.pages {
-  padding-left: 2em;
-  list-style: square;
-  font-weight: normal;
-}
-
 .selected {
   font-weight: bold;
 }
@@ -121,6 +54,11 @@ div.message {
   font-weight: bold;
   margin: 1em 0;
   padding: 1em;
+}
+
+/* footer */
+footer {
+  text-align: center;
 }
 
 /* errors */
