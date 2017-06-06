@@ -225,18 +225,18 @@
 	}
 
 	function public_navigation($subject_array, $page_array) {
-		$output = "<ul class=\"navbar-nav mr-auto\">";
+		$output = "<ul class=\"nav navbar-nav\">";
 		$output_sub = "";
 		$subject_set = find_all_subjects();
 		while($subject = mysqli_fetch_assoc($subject_set)) {
-			$output .= "<li class=\"nav-item";
+			$output .= "<li";
 			if ($subject_array && $subject["id"] == $subject_array["id"]) {
-				$output .= " active";
+				$output .= " class= \"active\"";
 			}
-			$output .= "\">";
+			$output .= ">";
 			$output .= "<a href=\"index.php?subject=";
 			$output .= urlencode($subject["id"]);
-			$output .= "\" class=\"nav-link\">";
+			$output .= "\" >";
 			$output .= htmlentities($subject["menu_name"]);
 			$output .= "</a>";
 

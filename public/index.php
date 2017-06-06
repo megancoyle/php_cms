@@ -10,10 +10,11 @@
 <?php $main_menu = $data[0]; ?>
 <?php $sub_menu = $data[1]; ?>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="collapse navbar-collapse" id="myNavbar">
         <?php echo $main_menu ?>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <div class="secondary-nav">
       <?php echo $sub_menu ?>

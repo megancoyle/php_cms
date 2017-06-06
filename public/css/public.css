@@ -34,6 +34,19 @@ img {
   list-style: none;
 }
 
+/* Toggle Nav */
+.navbar-toggler.navbar-toggler-right {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-toggler.navbar-toggler-right {
+    display: block;
+    float: right;
+    margin-top: 10px;
+  }
+}
+
 /* Page Content */
 #page {
 	float: left; height: 100%;

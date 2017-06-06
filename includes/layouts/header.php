@@ -15,8 +15,13 @@
 		<link href="css/public.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-		      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-		        <span class="navbar-toggler-icon"></span>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="index.php">PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></a>
+				</div>
