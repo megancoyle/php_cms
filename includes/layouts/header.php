@@ -1,8 +1,18 @@
+<?php require_once("../includes/session.php"); ?>
+<?php require_once("../includes/db_connection.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
 <?php
 	if (!isset($layout_context)) {
 		$layout_context = "public";
 	}
 ?>
+
+<?php find_selected_page(true); ?>
+
+<?php $data = public_navigation($current_subject, $current_page); ?>
+<?php $main_menu = $data[0]; ?>
+<?php $sub_menu = $data[1]; ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -16,7 +26,7 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
+			<div class="container-fluid container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="icon-bar"></span>
@@ -25,3 +35,12 @@
 		      </button>
 		      <a class="navbar-brand" href="index.php">PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></a>
 				</div>
+
+				      <div class="collapse navbar-collapse" id="myNavbar">
+				        <?php echo $main_menu ?>
+				      </div>
+				    </div>
+				    </nav>
+				  <?php if ($sub_menu != "") { ?>
+				   <?php include("../includes/layouts/secondary_nav.php"); ?>
+				   <?php } ?>

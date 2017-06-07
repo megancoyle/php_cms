@@ -1,6 +1,4 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 
 <?php find_selected_page(); ?>
@@ -59,13 +57,9 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php $layout_context = "admin"; ?>
-<?php include("../includes/layouts/header.php"); ?>
 
-<div id="main">
-  <div id="navigation">
+<div class="container">
 		<?php echo navigation($current_subject, $current_page); ?>
-  </div>
-  <div id="page">
 		<?php // $message is just a variable, doesn't use the SESSION
 			if (!empty($message)) {
 				echo "<div class=\"message\">" . htmlentities($message) . "</div>";
@@ -105,8 +99,6 @@ if (isset($_POST['submit'])) {
 		&nbsp;
 		&nbsp;
 		<a href="delete_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>" onclick="return confirm('Are you sure?');">Delete subject</a>
-
-	</div>
 </div>
 
 <?php include("../includes/layouts/footer.php"); ?>

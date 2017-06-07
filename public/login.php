@@ -1,6 +1,4 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 
 <?php
@@ -38,12 +36,8 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php $layout_context = "admin"; ?>
-<?php include("../includes/layouts/header.php"); ?>
-<div id="main">
-  <div id="navigation">
-    &nbsp;
-  </div>
-  <div id="page">
+
+<div class="container">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 
@@ -57,7 +51,6 @@ if (isset($_POST['submit'])) {
       </p>
       <input type="submit" name="submit" value="Submit" />
     </form>
-  </div>
 </div>
 
 <?php include("../includes/layouts/footer.php"); ?>

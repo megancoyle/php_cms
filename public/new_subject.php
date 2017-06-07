@@ -1,16 +1,9 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
-
-<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
+<?php $layout_context = "admin"; ?>
 <?php find_selected_page(); ?>
 
-<div id="main">
-  <div id="navigation">
+<div class="container">
 		<?php echo navigation($current_subject, $current_page); ?>
-  </div>
-  <div id="page">
 		<?php echo message(); ?>
 		<?php $errors = errors(); ?>
 		<?php echo form_errors($errors); ?>
@@ -40,7 +33,6 @@
 		</form>
 		<br />
 		<a href="manage_content.php">Cancel</a>
-	</div>
 </div>
 
 <?php include("../includes/layouts/footer.php"); ?>

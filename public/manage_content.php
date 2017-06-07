@@ -1,20 +1,14 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
-<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
+<?php $layout_context = "admin"; ?>
 <?php find_selected_page(); ?>
 
-<div id="main">
-  <div id="navigation">
+<div class="container">
 		<br />
 		<a href="admin.php">&laquo; Main menu</a><br />
 
 		<?php echo navigation($current_subject, $current_page); ?>
 		<br />
 		<a href="new_subject.php">+ Add a subject</a>
-  </div>
-  <div id="page">
 		<?php echo message(); ?>
 		<?php if ($current_subject) { ?>
 	    <h2>Manage Subject</h2>
@@ -59,7 +53,6 @@
 		<?php } else { ?>
 			Please select a subject or a page.
 		<?php }?>
-  </div>
 </div>
 
 <?php include("../includes/layouts/footer.php"); ?>

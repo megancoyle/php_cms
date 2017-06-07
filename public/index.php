@@ -1,25 +1,5 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
-
-<?php $layout_context = "public"; ?>
 <?php include("../includes/layouts/header.php"); ?>
-<?php find_selected_page(true); ?>
-
-<?php $data = public_navigation($current_subject, $current_page); ?>
-<?php $main_menu = $data[0]; ?>
-<?php $sub_menu = $data[1]; ?>
-
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <?php echo $main_menu ?>
-      </div>
-    </div>
-  </nav>
-
-    <div class="secondary-nav">
-      <?php echo $sub_menu ?>
-    </div>
-
+<?php $layout_context = "public"; ?>
     <div class="container">
       <?php if ($current_page) { ?>
 

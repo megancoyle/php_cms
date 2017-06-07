@@ -1,6 +1,4 @@
-<?php require_once("../includes/session.php"); ?>
-<?php require_once("../includes/db_connection.php"); ?>
-<?php require_once("../includes/functions.php"); ?>
+<?php include("../includes/layouts/header.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 
 <?php find_selected_page(); ?>
@@ -60,12 +58,9 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php $layout_context = "admin"; ?>
-<?php include("../includes/layouts/header.php"); ?>
-<div id="main">
-  <div id="navigation">
+
+<div class="container">
     <?php echo navigation($current_subject, $current_page); ?>
-  </div>
-  <div id="page">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 
@@ -97,7 +92,6 @@ if (isset($_POST['submit'])) {
     </form>
     <br />
     <a href="manage_content.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Cancel</a>
-  </div>
 </div>
 
 <?php include("../includes/layouts/footer.php"); ?>

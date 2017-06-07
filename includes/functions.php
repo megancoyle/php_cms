@@ -243,7 +243,7 @@
 			if ($subject_array["id"] == $subject["id"] ||
 					$page_array["subject_id"] == $subject["id"]) {
 				$page_set = find_pages_for_subject($subject["id"]);
-				$output_sub .= "<ul class=\"pages\">";
+				$output_sub .= "<ul class=\"nav\">";
 				while($page = mysqli_fetch_assoc($page_set)) {
 					$output_sub .= "<li";
 					if ($page_array && $page["id"] == $page_array["id"]) {

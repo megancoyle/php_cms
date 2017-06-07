@@ -34,6 +34,14 @@ img {
   list-style: none;
 }
 
+.navbar-inner li {
+  display: inline-block;
+}
+
+.navbar.navbar-inverse {
+  margin-bottom: 0;
+}
+
 /* Toggle Nav */
 .navbar-toggler.navbar-toggler-right {
   display: none;
