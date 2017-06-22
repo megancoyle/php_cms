@@ -1,12 +1,10 @@
-<?php include("../includes/layouts/header.php"); ?>
 <?php $layout_context = "admin"; ?>
+<?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
 <div class="container">
 		<br />
 		<a href="admin.php">&laquo; Main menu</a><br />
-
-		<?php echo navigation($current_subject, $current_page); ?>
 		<br />
 		<a href="new_subject.php">+ Add a subject</a>
 		<?php echo message(); ?>

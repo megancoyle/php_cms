@@ -1,3 +1,4 @@
+<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 
@@ -57,10 +58,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<?php $layout_context = "admin"; ?>
-
 <div class="container">
-    <?php echo navigation($current_subject, $current_page); ?>
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 

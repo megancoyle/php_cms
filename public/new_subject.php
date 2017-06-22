@@ -1,9 +1,8 @@
-<?php include("../includes/layouts/header.php"); ?>
 <?php $layout_context = "admin"; ?>
+<?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
 <div class="container">
-		<?php echo navigation($current_subject, $current_page); ?>
 		<?php echo message(); ?>
 		<?php $errors = errors(); ?>
 		<?php echo form_errors($errors); ?>

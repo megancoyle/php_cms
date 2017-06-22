@@ -9,6 +9,10 @@
 
 <?php find_selected_page(true); ?>
 
+<?php $admin_data = navigation($current_subject, $current_page); ?>
+<?php $admin_main_menu = $admin_data[0]; ?>
+<?php $admin_sub_menu = $admin_data[1]; ?>
+
 <?php $data = public_navigation($current_subject, $current_page); ?>
 <?php $main_menu = $data[0]; ?>
 <?php $sub_menu = $data[1]; ?>
@@ -37,7 +41,11 @@
 				</div>
 
 				      <div class="collapse navbar-collapse" id="myNavbar">
-				        <?php echo $main_menu ?>
+								<?php if ($layout_context === "admin") {
+									echo $admin_main_menu;
+								} else {
+									echo $main_menu;
+								} ?>
 				      </div>
 				    </div>
 				    </nav>
