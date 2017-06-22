@@ -37,12 +37,16 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="index.php">PHP CMS <?php if ($layout_context == "admin") { echo "Admin"; } ?></a>
+		      <?php if ($layout_context == "admin") {
+						echo '<a class="navbar-brand" href="admin.php">PHP CMS Admin</a>';
+					} else {
+						echo '<a class="navbar-brand" href="index.php">PHP CMS</a>';
+					} ?>
 				</div>
 
 				      <div class="collapse navbar-collapse" id="myNavbar">
-								<?php if ($layout_context === "admin") {
-									echo $admin_main_menu;
+								<?php if ($layout_context == "admin") {
+									echo $admin_main_menu . '<ul class="nav navbar-nav admin-links"><li><a href="new_subject.php">+ Subject</a></li> <li><a href="manage_admins.php">Users</a></li> <li><a href="logout.php">Logout</a></li></ul>';
 								} else {
 									echo $main_menu;
 								} ?>

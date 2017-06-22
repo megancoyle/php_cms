@@ -19,7 +19,7 @@
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar2">
-      <?php if ($layout_context === "admin") {
+      <?php if ($layout_context == "admin") {
         echo $admin_sub_menu;
       } else {
         echo $sub_menu;
