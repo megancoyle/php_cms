@@ -6,12 +6,10 @@
   $admin_set = find_all_admins();
 ?>
 
-<div class="container">
-    <br />
-    <a href="admin.php">&laquo; Main menu</a>
+<div class="container main-content">
     <?php echo message(); ?>
     <h2>Manage Admins</h2>
-    <table>
+    <table class="table">
       <tr>
         <th style="text-align: left; width: 200px;">Username</th>
         <th colspan="2" style="text-align: left;">Actions</th>

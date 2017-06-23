@@ -42,6 +42,15 @@ img {
   margin-bottom: 0;
 }
 
+nav.navbar.navbar-inverse {
+  border-radius: 0;
+}
+
+/* Secondary Nav */
+div#myNavbar2 {
+  margin-top: 5px;
+}
+
 /* Toggle Nav */
 .navbar-toggler.navbar-toggler-right {
   display: none;
@@ -71,10 +80,31 @@ img {
   color: #8D0D19;
 }
 
+.jumbotron.welcome-banner {
+  background-image: url(../images/fields.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 90vh;
+  color: white;
+}
+
+.banner-text {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
 .view-content {
   margin: 1em;
   padding: 1em;
   border: 1px solid #999;
+}
+
+.main-content {
+  height: 80vh;
 }
 
 div.message {

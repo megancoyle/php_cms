@@ -2,7 +2,7 @@
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
-<div class="container">
+<div class="container main-content">
 		<?php echo message(); ?>
 		<?php $errors = errors(); ?>
 		<?php echo form_errors($errors); ?>

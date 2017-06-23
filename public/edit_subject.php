@@ -1,3 +1,4 @@
+<?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 
@@ -56,10 +57,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<?php $layout_context = "admin"; ?>
-
-<div class="container">
-		<?php echo navigation($current_subject, $current_page); ?>
+<div class="container main-content">
 		<?php // $message is just a variable, doesn't use the SESSION
 			if (!empty($message)) {
 				echo "<div class=\"message\">" . htmlentities($message) . "</div>";

@@ -1,5 +1,19 @@
 # PHP CMS
-CMS system using CRUD built with PHP.
+A custom CMS system created with PHP and MySQL. Admin users have access to CRUD functionality.
+
+![Screenshot](screenshot.png)
+
+The CMS includes authentication where admins have a different view where they can:
+* Manage other admins
+* Edit content
+* Add content
+* Delete content
+
+![Screenshot](screenshot-admin.png)
+
+# Technologies Used
+* PHP
+* MySQL
 
 ## Installation
 

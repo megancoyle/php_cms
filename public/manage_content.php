@@ -2,9 +2,7 @@
 <?php include("../includes/layouts/header.php"); ?>
 <?php find_selected_page(); ?>
 
-<div class="container">
-		<br />
-		<a href="admin.php">&laquo; Main menu</a><br />
+<div class="container main-content">
 		<br />
 		<a href="new_subject.php">+ Add a subject</a>
 		<?php echo message(); ?>

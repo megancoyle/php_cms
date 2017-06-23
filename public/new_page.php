@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<div class="container">
+<div class="container main-content">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 

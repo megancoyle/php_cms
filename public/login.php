@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 
 <?php $layout_context = "admin"; ?>
 
-<div class="container">
+<div class="container main-content">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 

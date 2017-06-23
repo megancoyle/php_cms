@@ -5,7 +5,7 @@
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 
-<div class="container">
+<div class="container main-content">
     <h2>Admin Menu</h2>
     <p>Welcome to the admin area, <?php echo htmlentities($_SESSION["username"]); ?>.</p>
     <ul>
